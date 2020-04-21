@@ -13,7 +13,7 @@ var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 
 gulp.task("compileCSS", function(done){
-  gulp.src("source/sass/style.scss")
+  gulp.src("source/sass/main.scss")
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([
@@ -21,7 +21,7 @@ gulp.task("compileCSS", function(done){
     ]))
   .pipe(gulp.dest("source/css/"))
   .pipe(minify())
-  .pipe(rename('style.min.css'))
+  .pipe(rename('main.min.css'))
   .pipe(gulp.dest("source/css/"))
   .pipe(myLocalServer.stream());
   done();
