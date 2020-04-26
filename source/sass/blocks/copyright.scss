@@ -1,0 +1,17 @@
+.copyright{
+
+}
+
+.copyright__title{
+
+}
+
+.copyright__link{
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright{
+    width: 160px;
+  }
+}

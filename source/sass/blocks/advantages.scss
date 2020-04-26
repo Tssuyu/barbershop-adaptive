@@ -1,0 +1,60 @@
+.advantages{
+  width: 320px;
+  margin: 0 auto;
+  min-height: 443px;
+  outline: 1px solid red;
+}
+
+.advantages__wrapper{
+
+}
+
+.advantages__list{
+  @include reset-list;
+}
+
+.advantages__item{
+
+}
+
+.advantages__title{
+  margin: 0;
+}
+
+.advantages__description{
+  margin: 0;
+}
+
+.advantages__item--fast{
+
+}
+
+.advantages__item--cool{
+
+}
+
+.advantages__item--expensive{
+
+}
+
+.advantages__toggles{
+
+}
+
+@media (min-width: $tablet-width) {
+  .advantages{
+    width: 640px;
+    min-height: 580px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages{
+    width: 960px;
+    min-height: 460px;
+  }
+
+  .advantages__list{
+    display: flex;
+  }
+}
