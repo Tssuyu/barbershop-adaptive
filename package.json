@@ -1,49 +1,39 @@
 {
-  "name": "barbershop-adaptive",
-  "version": "1.0.0",
+  "name": "test",
+  "version": "0.1.0",
   "private": true,
-  "description": " Личный проект «Барбершоп», выполненный в рамках пройденного онлайн-курса «Продвинутый HTML и CSS, Уровень 2» от HTML Academy.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tssuyu/barbershop-adaptive.git"
-  },
-  "author": "Tssuyu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Tssuyu/barbershop-adaptive/issues"
-  },
-  "homepage": "https://github.com/Tssuyu/barbershop-adaptive#readme",
+  "description": "Личный проект test",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^9.7.6",
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-posthtml": "^3.0.4",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-svgstore": "^7.0.1",
-    "gulp-webp": "^4.0.1",
-    "node-sass": "^4.13.1",
-    "posthtml-include": "^1.4.3",
-    "stylelint": "^13.3.2",
-    "stylelint-config-htmlacademy": "^0.1.4"
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "6.7.x",
+    "browser-sync": "2.18.12",
+    "css-mqpacker": "^6.0.1",
+    "del": "^3.0.0",
+    "gulp": "3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-less": "3.3.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "run-sequence": "^2.1.0"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "editorconfig-cli": [
+    "*.html",
     "*.json",
-    "source/*.html"
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
   ],
   "engines": {
-    "node": ">=13.13.0",
-    "npm": ">= 6.14.4"
+    "node": "6.10"
   }
 }
