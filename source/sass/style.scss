@@ -1,5 +1,110 @@
-@import "blocks/page-header";
-@import "blocks/page-header";
+// variables.scss
+$bg-darkgrey: #292929;
+$bg-lightgrey: #f8f5f2;
+$tablet-width: 768px;
+$desktop-width: 1200px;
 
+// scaffolding.scss
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
 
+  font-size: 18px;
+  line-height: 27px;
+  font-family: Arial, sans-serif;
+  color: #f7f4f1;
+  font-style: normal;
 
+  background-color: $bg-darkgrey;
+}
+
+img {
+  min-width: 100%;
+  height: auto;
+}
+
+// mixins.scss
+@mixin no-outlines {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// blocks/page-header.scss
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 85px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    order: 2;
+    height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 648px;
+  }
+}
+
+// blocks/main-nav.scss
+.main-nav {
+  width: 320px;
+}
+
+.main-nav__list {
+  @include reset-list;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: 100%;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .site-list {
+    width: 570px;
+  }
+
+  .user-list {
+    width: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__wrapper {
+    width: 960px;
+  }
+
+  .site-list {
+    width: 780px;
+  }
+
+  .user-list {
+    width: 160px;
+  }
+}
