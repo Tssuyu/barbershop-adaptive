@@ -154,15 +154,15 @@ img {
 // *inner-page (form.html)
 // blocks/page-header.scss
 
-// !!!
+// !!!уточнить как делать на разных страницах с адаптивом
 @media (min-width: $tablet-width) {
-  .page-header__logo {
+  .inner-page-header .page-header__logo {
     height: 215px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__logo {
+  .inner-page-header .page-header__logo {
     height: 310px;
   }
 }
@@ -174,20 +174,20 @@ img {
  }
 
  @media (min-width: $tablet-width) {
-  .page-header__logo {
-    height: 215px;
+  .inner-page-main__wrapper {
+    width: 640px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__logo {
-    height: 310px;
+  .inner-page-main__wrapper {
+    width: 960px;
   }
 }
 
 
 // blocks/form.scss
-.form {// центровщик
+.form {
   display: flex;
   flex-direction: column;
 }
@@ -195,3 +195,5 @@ img {
 .form__list {
   @include reset-list;
 }
+
+// !попапы

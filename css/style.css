@@ -134,13 +134,13 @@ img {
 }
 
 @media (min-width: 768px) {
-  .page-header__logo {
+  .inner-page-header .page-header__logo {
     height: 215px;
   }
 }
 
 @media (min-width: 1200px) {
-  .page-header__logo {
+  .inner-page-header .page-header__logo {
     height: 310px;
   }
 }
@@ -151,14 +151,14 @@ img {
 }
 
 @media (min-width: 768px) {
-  .page-header__logo {
-    height: 215px;
+  .inner-page-main__wrapper {
+    width: 640px;
   }
 }
 
 @media (min-width: 1200px) {
-  .page-header__logo {
-    height: 310px;
+  .inner-page-main__wrapper {
+    width: 960px;
   }
 }
 
