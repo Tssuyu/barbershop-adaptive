@@ -16,6 +16,7 @@ img {
 }
 
 .page-header {
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,6 +46,7 @@ img {
 }
 
 .main-nav {
+  background-color: green;
   width: 320px;
 }
 
@@ -90,6 +92,7 @@ img {
 }
 
 .stats {
+  background-color: yellow;
   width: 320px;
   margin: 0 auto;
 }
