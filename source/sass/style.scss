@@ -43,6 +43,7 @@ img {
 
 // blocks/page-header.scss
 .page-header {
+  background-color: red;
   display: flex;
   flex-direction: column;
 }
@@ -66,6 +67,7 @@ img {
 
 // blocks/main-nav.scss
 .main-nav {
+  background-color: green;
   width: 320px;
 }
 
@@ -111,6 +113,7 @@ img {
 
 // blocks/stats.scss
 .stats {
+  background-color: yellow;
   width: 320px;
   margin: 0 auto;
 }
@@ -147,3 +150,4 @@ img {
     width: 320px;
   }
 }
+ 
