@@ -150,4 +150,48 @@ img {
     width: 320px;
   }
 }
- 
+
+// *inner-page (form.html)
+// blocks/page-header.scss
+
+// !!!
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    height: 215px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 310px;
+  }
+}
+
+// blocks/inner-page.scss
+ .inner-page-main__wrapper {
+   width: 280px;
+   margin: 0 auto;
+ }
+
+ @media (min-width: $tablet-width) {
+  .page-header__logo {
+    height: 215px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 310px;
+  }
+}
+
+
+// blocks/form.scss
+.form {// центровщик
+  display: flex;
+  flex-direction: column;
+}
+
+.form__list {
+  @include reset-list;
+}
