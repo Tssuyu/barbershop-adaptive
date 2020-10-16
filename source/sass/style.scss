@@ -20,7 +20,7 @@ body {
 }
 
 img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -154,44 +154,101 @@ img {
 // *inner-page (form.html)
 // blocks/page-header.scss
 
-// !!!
+// ? уточнить как делать на разных страницах с адаптивом
 @media (min-width: $tablet-width) {
-  .page-header__logo {
+  .inner-page-header .page-header__logo {
     height: 215px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__logo {
+  .inner-page-header .page-header__logo {
     height: 310px;
   }
 }
 
 // blocks/inner-page.scss
- .inner-page-main__wrapper {
-   width: 280px;
-   margin: 0 auto;
- }
+.inner-page-main__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
 
- @media (min-width: $tablet-width) {
-  .page-header__logo {
-    height: 215px;
+@media (min-width: $tablet-width) {
+  .inner-page-main__wrapper {
+    width: 640px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__logo {
-    height: 310px;
+  .inner-page-main__wrapper {
+    width: 960px;
   }
 }
 
-
 // blocks/form.scss
-.form {// центровщик
+.form {
   display: flex;
   flex-direction: column;
 }
 
 .form__list {
   @include reset-list;
+}
+
+// TODO попапы
+
+// * inner-page (photo.html)
+// blocks/clients-cards.scss
+.clients-cards__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.clients-cards__list {
+  display: flex;
+  flex-direction: column;
+  @include reset-list;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .clients-cards__wrapper {
+    width: 640px;
+  }
+
+  .client-card {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .clients-cards__wrapper {
+    width: 960px;
+  }
+
+  .clients-cards__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .client-card:not(:first-child) {
+    width: 294px;
+  }
+}
+
+// blocks/price.scss
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: $desktop-width) {
+  .price {
+    flex-direction: row;
+  }
 }
