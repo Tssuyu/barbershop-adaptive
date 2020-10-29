@@ -3,6 +3,7 @@ $bg-darkgrey: #292929;
 $bg-lightgrey: #f8f5f2;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+$mobile-width-only: 767px;
 
 // scaffolding.scss
 @font-face {
@@ -216,10 +217,84 @@ img {
   @include reset-list;
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .main-nav--closed .site-list__item--active a {
+    padding-right: 70px;
+    padding-left: 70px;
+
+    text-align: center;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 70px;
+    z-index: 10;
+
+    min-height: 80vh;
+
+    background-color: #6a4d38;
+  }
+
+  .main-nav--opened .main-nav__wrapper::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 7px;
+    height: 100%;
+    box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.4);
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
+  }
+
+  .main-nav--nojs .site-list__item a {
+    padding-right: 21px;
+    padding-left: 21px;
+
+    text-align: left;
+  }
+
+  .main-nav--nojs .user-list__item {
+    display: block;
+
+    background-color: #6a4d38;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-nav {
-    width: 100%;
+    width: auto;
     margin: 0;
+
+    background-color: #000000;
   }
 
   .main-nav__wrapper {
@@ -227,6 +302,10 @@ img {
     justify-content: space-between;
     width: 640px;
     margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }
 
@@ -271,7 +350,40 @@ img {
 
 @media (min-width: $tablet-width) {
   .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
     width: 570px;
+  }
+
+  .site-list__item {
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-list__item a {
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 23px;
+
+    background: none;
+    border: none;
+  }
+
+  .site-list__item a[href] {
+    &:hover {
+      color: #826550;
+      background-color: #000000;
+    }
+    &:active {
+      color: #ffffff;
+      background-color: #000000;
+      opacity: 0.3;
+    }
   }
 }
 
